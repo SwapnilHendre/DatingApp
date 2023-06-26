@@ -22,7 +22,7 @@ export class NavbarComponent implements OnInit {
     this.accountService.login(this.model).subscribe({
       next: _ => {
         this.router.navigateByUrl('/members');
-        this.memberService.resetUserParams();
+        this.model = {};
       }
     });
   }
